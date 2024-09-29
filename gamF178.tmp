@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://5pasev37re6p"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_7afn1"]
+[ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://assets/knight.png" id="1_qpf2h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp7dm"]
+atlas = ExtResource("1_qpf2h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28bqi"]
+atlas = ExtResource("1_qpf2h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh7gv"]
+atlas = ExtResource("1_qpf2h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2q11h"]
+atlas = ExtResource("1_qpf2h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emosh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp7dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28bqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh7gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2q11h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xycsg"]
+size = Vector2(7.5, 12)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lb73m"]
+
+[node name="Game" type="Node2D"]
+
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_7afn1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_emosh")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.887538
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_xycsg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_lb73m")
