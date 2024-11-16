@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://bse4uu774scr3"]
+[gd_scene load_steps=18 format=4 uid="uid://5pasev37re6p"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7afn1"]
+[ext_resource type="Script" path="res://Scripts/gameStateManager.gd" id="1_c6rtk"]
+[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/main.tscn" id="1_iomca"]
 [ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="1_qpf2h"]
-[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/main.tscn" id="1_u8o5s"]
-[ext_resource type="Script" path="res://Scripts/gameStateManager.gd" id="1_uk2s4"]
 [ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://Assets/tilesets/plains.png" id="3_n1n4v"]
+[ext_resource type="Script" path="res://Scripts/game_grid.gd" id="3_p77l7"]
 [ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://Assets/tilesets/grass.png" id="4_bnsmo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0bgsa"]
@@ -128,87 +129,96 @@ sources/1 = SubResource("TileSetAtlasSource_klfcx")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hid6l"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_uk2s4")
 
-[node name="wordGame" parent="." instance=ExtResource("1_u8o5s")]
+[node name="WordGame" parent="." instance=ExtResource("1_iomca")]
 
-[node name="MarginContainer" parent="wordGame" index="0"]
+[node name="MarginContainer" parent="WordGame" index="0"]
 visible = false
 
-[node name="VBoxContainer" parent="wordGame/MarginContainer" index="0"]
+[node name="VBoxContainer" parent="WordGame/MarginContainer" index="0"]
 visible = false
 
-[node name="CenterContainer" parent="wordGame/MarginContainer/VBoxContainer" index="0"]
+[node name="CenterContainer" parent="WordGame/MarginContainer/VBoxContainer" index="0"]
 visible = false
 
-[node name="Rows" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer" index="0"]
+[node name="Rows" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer" index="0"]
 visible = false
 
-[node name="Row" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="0"]
+[node name="Row" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="0"]
 visible = false
 
-[node name="Row2" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="1"]
+[node name="Row2" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="1"]
 visible = false
 
-[node name="Row3" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="2"]
+[node name="Row3" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="2"]
 visible = false
 
-[node name="Row4" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="3"]
+[node name="Row4" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="3"]
 visible = false
 
-[node name="Row5" parent="wordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="4"]
+[node name="Row5" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="4"]
 visible = false
 
-[node name="Keyboard" parent="wordGame/MarginContainer/VBoxContainer" index="1"]
+[node name="Keyboard" parent="WordGame/MarginContainer/VBoxContainer" index="1"]
 visible = false
 
-[node name="ValidationAlert" parent="wordGame" index="2"]
+[node name="ValidationAlert" parent="WordGame" index="2"]
 visible = false
 
-[node name="ResultsUI" parent="wordGame" index="3"]
+[node name="ResultsUI" parent="WordGame" index="3"]
 visible = false
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="UI" type="Node" parent="."]
+
+[node name="GameStateManager" type="Node" parent="."]
+script = ExtResource("1_c6rtk")
+
+[node name="OnHold" type="Node" parent="."]
+
+[node name="GameGrid" type="Node2D" parent="."]
+script = ExtResource("3_p77l7")
+
+[node name="Player" type="CharacterBody2D" parent="GameGrid"]
 z_index = 1
 script = ExtResource("1_7afn1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameGrid/Player"]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_emosh")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.974057
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameGrid/Player"]
 position = Vector2(-0.5, -9.5)
 shape = SubResource("RectangleShape2D_xycsg")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="GameGrid"]
 zoom = Vector2(4.035, 4.035)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="GameGrid"]
 tile_map_data = PackedByteArray("AAAAAP//AAACAAEAAAD//wAAAAACAAEAAAAAAP7/AAACAAEAAAD///7/AAACAAEAAAD+//7/AAACAAEAAAD+/wAAAAACAAEAAAABAP7/AAACAAEAAAABAP//AAACAAEAAAD///3/AAACAAEAAAAAAP3/AAACAAEAAAD//wEAAAACAAEAAAAAAAEAAAAEAAAAAAD9/wEAAAACAAEAAAACAP3/AAACAAEAAAD9//3/AAACAAEAAAACAP7/AAACAAEAAAACAP//AAACAAEAAAACAAAAAAACAAEAAAD9////AAACAAEAAAD9/wAAAAACAAEAAAADAP7/AAACAAEAAAADAAAAAAACAAEAAAADAP//AAACAAEAAAABAAEAAAAFAAAAAAD+/wEAAAACAAEAAAD+/wIAAAACAAEAAAD+/wMAAAACAAEAAAD+/wQAAAACAAIAAAABAAIAAAAFAAEAAAABAAMAAAACAAEAAAABAAQAAAACAAIAAAAEAP7/AAACAAEAAAAEAP//AAACAAEAAAAEAAAAAAACAAEAAAAFAP7/AAACAAEAAAAGAP//AAACAAEAAAAHAP//AAACAAEAAAAIAAAAAAADAAEAAAAGAP7/AAACAAEAAAAHAP7/AAACAAEAAAAIAP//AAADAAEAAAAIAP7/AAADAAEAAAAFAP//AAACAAEAAAAFAAAAAAACAAEAAAAGAAAAAAACAAEAAAAHAAAAAAACAAEAAAACAAIAAAACAAEAAAAIAAQAAAADAAIAAAAHAAQAAAACAAIAAAAGAAQAAAACAAIAAAAFAAQAAAACAAIAAAAEAAQAAAACAAIAAAADAAQAAAACAAIAAAACAAQAAAACAAIAAAAAAAQAAAACAAIAAAD//wQAAAACAAIAAAD9/wQAAAACAAIAAAD8/wQAAAACAAIAAAD7/wQAAAACAAIAAAD6/wQAAAACAAIAAAD5/wQAAAACAAIAAAD4/wQAAAACAAIAAAD3/wQAAAABAAIAAAD3//v/AAABAAAAAAD3//z/AAABAAEAAAD3//3/AAABAAEAAAD3//7/AAABAAEAAAD3////AAABAAEAAAD3/wAAAAABAAEAAAD3/wEAAAABAAEAAAD3/wIAAAABAAEAAAD3/wMAAAABAAEAAAD4//v/AAACAAAAAAD5//v/AAACAAAAAAD6//v/AAACAAAAAAD7//v/AAACAAAAAAD8//v/AAACAAAAAAD9//v/AAACAAAAAAD+//v/AAACAAAAAAD///v/AAACAAAAAAAAAPv/AAACAAAAAAABAPv/AAACAAAAAAACAPv/AAACAAAAAAADAPv/AAACAAAAAAAEAPv/AAACAAAAAAAFAPv/AAACAAAAAAAGAPv/AAACAAAAAAAHAPv/AAACAAAAAAAIAPv/AAADAAAAAAAIAPz/AAADAAEAAAAIAP3/AAADAAEAAAAIAAEAAAADAAEAAAAIAAIAAAADAAEAAAAIAAMAAAADAAEAAAAHAAMAAAACAAEAAAAGAAMAAAACAAEAAAAFAAMAAAACAAEAAAAEAAMAAAACAAEAAAADAAMAAAACAAEAAAACAAMAAAACAAEAAAAAAAMAAAACAAEAAAD//wMAAAACAAEAAAD9/wMAAAACAAEAAAD8/wMAAAACAAEAAAD7/wMAAAACAAEAAAD6/wMAAAACAAEAAAD5/wMAAAACAAEAAAD4/wMAAAACAAEAAAD4/wIAAAACAAEAAAD5/wIAAAACAAEAAAD6/wIAAAACAAEAAAD7/wIAAAACAAEAAAD8/wIAAAACAAEAAAD9/wIAAAACAAEAAAD//wIAAAACAAEAAAAAAAIAAAAEAAEAAAADAAIAAAACAAEAAAAEAAIAAAACAAEAAAAFAAIAAAACAAEAAAAGAAIAAAACAAEAAAAHAAIAAAACAAEAAAAHAAEAAAACAAEAAAAGAAEAAAACAAEAAAAFAAEAAAACAAEAAAAEAAEAAAACAAEAAAADAAEAAAACAAEAAAACAAEAAAACAAEAAAD8/wEAAAACAAEAAAD7/wEAAAACAAEAAAD6/wEAAAACAAEAAAD5/wEAAAACAAEAAAD4/wEAAAACAAEAAAD4/wAAAAACAAEAAAD5/wAAAAACAAEAAAD6/wAAAAACAAEAAAD7/wAAAAACAAEAAAD8/wAAAAACAAEAAAAAAAAAAAACAAEAAAABAAAAAAACAAEAAAD4////AAACAAEAAAD5////AAACAAEAAAD6////AAACAAEAAAD7////AAACAAEAAAD8////AAACAAEAAAD+////AAACAAEAAAD/////AAACAAEAAAD4//7/AAACAAEAAAD5//7/AAAEAAEAAAD6//7/AAAFAAEAAAD7//7/AAACAAEAAAD8//7/AAACAAEAAAD9//7/AAACAAEAAAD4//3/AAACAAEAAAD5//3/AAAEAAAAAAD6//3/AAAFAAAAAAD7//3/AAACAAEAAAD8//3/AAACAAEAAAD+//3/AAACAAEAAAABAP3/AAACAAEAAAADAP3/AAACAAEAAAAEAP3/AAAEAAEAAAAFAP3/AAAFAAEAAAAGAP3/AAACAAEAAAAHAP3/AAACAAEAAAD4//z/AAACAAEAAAD5//z/AAACAAEAAAD6//z/AAACAAEAAAD7//z/AAACAAEAAAD8//z/AAACAAEAAAD9//z/AAACAAEAAAD+//z/AAACAAEAAAD///z/AAACAAEAAAAAAPz/AAACAAEAAAABAPz/AAACAAEAAAACAPz/AAACAAEAAAADAPz/AAACAAEAAAAEAPz/AAAEAAAAAAAFAPz/AAAFAAAAAAAGAPz/AAACAAEAAAAHAPz/AAACAAEAAAA=")
 tile_set = SubResource("TileSet_xqujr")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="GameGrid"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameGrid/StaticBody2D"]
 position = Vector2(-143, 0)
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_hid6l")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="GameGrid/StaticBody2D"]
 position = Vector2(0, -79)
 rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_hid6l")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="GameGrid/StaticBody2D"]
 position = Vector2(143, 0)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_hid6l")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GameGrid/StaticBody2D"]
 position = Vector2(0, 76)
 shape = SubResource("WorldBoundaryShape2D_hid6l")
 
-[editable path="wordGame"]
+[editable path="WordGame"]
