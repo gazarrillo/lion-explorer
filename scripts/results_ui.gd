@@ -29,4 +29,4 @@ func show_results(has_won: bool, word: String, number_of_moves: int):
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/game.tscn")
