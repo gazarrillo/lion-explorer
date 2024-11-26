@@ -9,6 +9,7 @@ class_name ResultsUI
 @onready var word_label = %WordLabel
 @onready var results_label = %ResultsLabel
 
+@onready var game = $"root/Game"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,4 +29,4 @@ func show_results(has_won: bool, word: String, number_of_moves: int):
 
 
 func _on_button_pressed():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://game.tscn")

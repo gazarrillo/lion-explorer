@@ -1,8 +1,8 @@
-[gd_scene load_steps=54 format=4 uid="uid://bse4uu774scr3"]
+[gd_scene load_steps=55 format=4 uid="uid://bse4uu774scr3"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_7afn1"]
 [ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="1_qpf2h"]
-[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/main.tscn" id="1_u8o5s"]
+[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/word_game.tscn" id="1_u8o5s"]
 [ext_resource type="Script" path="res://Scripts/gameStateManager.gd" id="1_uk2s4"]
 [ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://Assets/tilesets/plains.png" id="3_n1n4v"]
 [ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://Assets/tilesets/grass.png" id="4_bnsmo"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://f5vj5rly7x0i" path="res://Assets/tilesets/bryce jordan.png" id="15_nkmok"]
 [ext_resource type="Texture2D" uid="uid://k3fb5rcfy7pc" path="res://Assets/tilesets/creamery.png" id="16_vy5lm"]
 [ext_resource type="Texture2D" uid="uid://d3hwmmsxidm4f" path="res://Assets/tilesets/house 1.png" id="24_hual4"]
+[ext_resource type="Script" path="res://Scripts/landmarks.gd" id="25_vqspg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4um5n"]
 texture = ExtResource("3_n1n4v")
@@ -298,7 +299,7 @@ distance = -1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_br6i5"]
 size = Vector2(77, 61)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node"]
 script = ExtResource("1_uk2s4")
 
 [node name="WordGame" parent="." instance=ExtResource("1_u8o5s")]
@@ -391,7 +392,8 @@ position = Vector2(625.415, 0)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_ib3oq")
 
-[node name="Landmarks" type="StaticBody2D" parent="Game Grid"]
+[node name="Landmarks" type="Area2D" parent="Game Grid"]
+script = ExtResource("25_vqspg")
 
 [node name="Old Main" type="CollisionShape2D" parent="Game Grid/Landmarks"]
 position = Vector2(111.5, -152.5)
@@ -426,5 +428,7 @@ shape = SubResource("RectangleShape2D_br6i5")
 position = Vector2(603, -310)
 scale = Vector2(1.055, 1.335)
 shape = SubResource("RectangleShape2D_br6i5")
+
+[connection signal="body_entered" from="Game Grid/Landmarks" to="Game Grid/Landmarks" method="_on_body_entered"]
 
 [editable path="WordGame"]

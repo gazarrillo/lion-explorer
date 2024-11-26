@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=4 uid="uid://bse4uu774scr3"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_7afn1"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_7afn1"]
 [ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="1_qpf2h"]
-[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/main.tscn" id="1_u8o5s"]
+[ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/word_game.tscn" id="1_u8o5s"]
 [ext_resource type="Script" path="res://Scripts/gameStateManager.gd" id="1_uk2s4"]
 [ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://Assets/tilesets/plains.png" id="3_n1n4v"]
 [ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://Assets/tilesets/grass.png" id="4_bnsmo"]
