@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_7afn1"]
 [ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="1_qpf2h"]
 [ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/word_game.tscn" id="1_u8o5s"]
-[ext_resource type="Script" path="res://Scripts/gameStateManager.gd" id="1_uk2s4"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_uk2s4"]
 [ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://Assets/tilesets/plains.png" id="3_n1n4v"]
 [ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://Assets/tilesets/grass.png" id="4_bnsmo"]
 [ext_resource type="Texture2D" uid="uid://cciynqurjcx84" path="res://Assets/tilesets/Grass 1.png" id="7_5xare"]
@@ -300,47 +300,16 @@ distance = -1.0
 size = Vector2(77, 61)
 
 [node name="Game" type="Node"]
+
+[node name="Word Game" parent="." instance=ExtResource("1_u8o5s")]
+unique_name_in_owner = true
+
+[node name="Game Manager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_uk2s4")
 
-[node name="WordGame" parent="." instance=ExtResource("1_u8o5s")]
-
-[node name="MarginContainer" parent="WordGame" index="0"]
-visible = false
-
-[node name="VBoxContainer" parent="WordGame/MarginContainer" index="0"]
-visible = false
-
-[node name="CenterContainer" parent="WordGame/MarginContainer/VBoxContainer" index="0"]
-visible = false
-
-[node name="Rows" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer" index="0"]
-visible = false
-
-[node name="Row" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="0"]
-visible = false
-
-[node name="Row2" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="1"]
-visible = false
-
-[node name="Row3" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="2"]
-visible = false
-
-[node name="Row4" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="3"]
-visible = false
-
-[node name="Row5" parent="WordGame/MarginContainer/VBoxContainer/CenterContainer/Rows" index="4"]
-visible = false
-
-[node name="Keyboard" parent="WordGame/MarginContainer/VBoxContainer" index="1"]
-visible = false
-
-[node name="ValidationAlert" parent="WordGame" index="2"]
-visible = false
-
-[node name="ResultsUI" parent="WordGame" index="3"]
-visible = false
-
 [node name="Game Grid" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Game Grid"]
 position = Vector2(147.38, -310.26)
@@ -353,6 +322,7 @@ tile_map_data = PackedByteArray("AAD8//v/DwAAAAAAAAD5//v/DwAAAAAAAAD5//7/DwAAAAA
 tile_set = SubResource("TileSet_xqujr")
 
 [node name="Player" type="CharacterBody2D" parent="Game Grid"]
+unique_name_in_owner = true
 z_index = 1
 script = ExtResource("1_7afn1")
 
@@ -392,43 +362,78 @@ position = Vector2(625.415, 0)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_ib3oq")
 
-[node name="Landmarks" type="Area2D" parent="Game Grid"]
-script = ExtResource("25_vqspg")
+[node name="Landmarks" type="Node2D" parent="Game Grid"]
 
-[node name="Old Main" type="CollisionShape2D" parent="Game Grid/Landmarks"]
+[node name="Old Main" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "old_main"
+
+[node name="Old Main" type="CollisionShape2D" parent="Game Grid/Landmarks/Old Main"]
 position = Vector2(111.5, -152.5)
 shape = SubResource("RectangleShape2D_br6i5")
 
-[node name="Lion Shrine" type="CollisionShape2D" parent="Game Grid/Landmarks"]
+[node name="Node" type="Node" parent="Game Grid/Landmarks/Old Main"]
+
+[node name="Lion Shrine" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "lion_shrine"
+
+[node name="Lion Shrine" type="CollisionShape2D" parent="Game Grid/Landmarks/Lion Shrine"]
 position = Vector2(4, -282)
 scale = Vector2(0.64, 0.52)
 shape = SubResource("RectangleShape2D_br6i5")
 
-[node name="Pattee Library" type="CollisionShape2D" parent="Game Grid/Landmarks"]
-position = Vector2(232, -288)
-scale = Vector2(1.025, 0.855)
-shape = SubResource("RectangleShape2D_br6i5")
+[node name="Beaver Stadium" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "beaver_stadium"
 
-[node name="Creamery" type="CollisionShape2D" parent="Game Grid/Landmarks"]
-position = Vector2(388, -305)
-scale = Vector2(0.595, 0.67)
-shape = SubResource("RectangleShape2D_br6i5")
-
-[node name="HUB" type="CollisionShape2D" parent="Game Grid/Landmarks"]
-position = Vector2(327, -106)
-scale = Vector2(1.005, 0.405)
-shape = SubResource("RectangleShape2D_br6i5")
-
-[node name="BJC" type="CollisionShape2D" parent="Game Grid/Landmarks"]
-position = Vector2(591, -140)
-scale = Vector2(1.03, 0.605)
-shape = SubResource("RectangleShape2D_br6i5")
-
-[node name="Beaver Stadium" type="CollisionShape2D" parent="Game Grid/Landmarks"]
+[node name="Beaver Stadium" type="CollisionShape2D" parent="Game Grid/Landmarks/Beaver Stadium"]
 position = Vector2(603, -310)
 scale = Vector2(1.055, 1.335)
 shape = SubResource("RectangleShape2D_br6i5")
 
-[connection signal="body_entered" from="Game Grid/Landmarks" to="Game Grid/Landmarks" method="_on_body_entered"]
+[node name="BJC" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "bjc"
 
-[editable path="WordGame"]
+[node name="BJC" type="CollisionShape2D" parent="Game Grid/Landmarks/BJC"]
+position = Vector2(591, -140)
+scale = Vector2(1.03, 0.605)
+shape = SubResource("RectangleShape2D_br6i5")
+
+[node name="HUB" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "hub"
+
+[node name="HUB" type="CollisionShape2D" parent="Game Grid/Landmarks/HUB"]
+position = Vector2(327, -106)
+scale = Vector2(1.005, 0.405)
+shape = SubResource("RectangleShape2D_br6i5")
+
+[node name="Creamery" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "creamery"
+
+[node name="Creamery" type="CollisionShape2D" parent="Game Grid/Landmarks/Creamery"]
+position = Vector2(388, -305)
+scale = Vector2(0.595, 0.67)
+shape = SubResource("RectangleShape2D_br6i5")
+
+[node name="Pattee Library" type="Area2D" parent="Game Grid/Landmarks"]
+script = ExtResource("25_vqspg")
+landmark_name = "patee_library"
+
+[node name="Pattee Library" type="CollisionShape2D" parent="Game Grid/Landmarks/Pattee Library"]
+position = Vector2(232, -288)
+scale = Vector2(1.025, 0.855)
+shape = SubResource("RectangleShape2D_br6i5")
+
+[connection signal="body_entered" from="Game Grid/Landmarks/Old Main" to="Game Grid/Landmarks/Old Main" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/Lion Shrine" to="Game Grid/Landmarks/Lion Shrine" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/Beaver Stadium" to="Game Grid/Landmarks/Beaver Stadium" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/BJC" to="Game Grid/Landmarks/BJC" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/HUB" to="Game Grid/Landmarks/HUB" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/Creamery" to="Game Grid/Landmarks/Creamery" method="_on_body_entered"]
+[connection signal="body_entered" from="Game Grid/Landmarks/Pattee Library" to="Game Grid/Landmarks/Pattee Library" method="_on_body_entered"]
+
+[editable path="Word Game"]

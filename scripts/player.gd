@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 
+func _ready():
+	position = GameManager.player_position
+
 func _physics_process(_delta: float) -> void:
 	# Initialize movement vector
 	var movement_vector = Vector2.ZERO
