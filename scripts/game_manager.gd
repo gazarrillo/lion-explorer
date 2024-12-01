@@ -11,9 +11,12 @@ var landmarks_visited = []
 var score = 0
 
 func explore():
-	get_tree().change_scene_to_file("res://Scenes/game.tscn")
-	print('Score: ',score)
-	print("Ready to explore the game grid.")
+	if len(landmarks_visited) == 2:
+			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/game.tscn")
+		print('Score: ',score)
+		print("Ready to explore the game grid.")
 
 func start_word_game(landmark_name):
 	if landmark_name not in landmarks_visited:
@@ -23,3 +26,8 @@ func start_word_game(landmark_name):
 		print("Word game started.")
 	else:
 		print("Landmark Visited!")
+		
+func restart_game():
+	score = 0
+	landmarks_visited = []
+	player_position = Vector2(0,0)
