@@ -52,7 +52,6 @@ func _on_keyboard_enter_pressed():
 	
 func on_word_valid(word_to_check: String, letters):
 	var validation_result = validate_word(word_to_guess, letters) 
-	print_debug(validation_result)
 	
 	for i in letter_tiles.size():
 		letter_tiles[i].set_tile_state(validation_result[i])
