@@ -1,7 +1,5 @@
 extends ColorRect
 
-class_name ResultsUI
-
 @export var win_color: Color
 @export var lose_color: Color
 @export var alpha_factor: float = .4
