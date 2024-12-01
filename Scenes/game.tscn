@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://bse4uu774scr3"]
+[gd_scene load_steps=56 format=4 uid="uid://bse4uu774scr3"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_7afn1"]
 [ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="1_qpf2h"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://k3fb5rcfy7pc" path="res://Assets/tilesets/creamery.png" id="16_vy5lm"]
 [ext_resource type="Texture2D" uid="uid://d3hwmmsxidm4f" path="res://Assets/tilesets/house 1.png" id="24_hual4"]
 [ext_resource type="Script" path="res://Scripts/landmarks.gd" id="25_vqspg"]
+[ext_resource type="PackedScene" uid="uid://bl0ihysmac0v1" path="res://Scenes/main_menu.tscn" id="26_e2jvf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4um5n"]
 texture = ExtResource("3_n1n4v")
@@ -428,6 +429,9 @@ position = Vector2(232, -288)
 scale = Vector2(1.025, 0.855)
 shape = SubResource("RectangleShape2D_br6i5")
 
+[node name="Main Menu" parent="." instance=ExtResource("26_e2jvf")]
+visible = false
+
 [connection signal="body_entered" from="Game Grid/Landmarks/Old Main" to="Game Grid/Landmarks/Old Main" method="_on_body_entered"]
 [connection signal="body_entered" from="Game Grid/Landmarks/Lion Shrine" to="Game Grid/Landmarks/Lion Shrine" method="_on_body_entered"]
 [connection signal="body_entered" from="Game Grid/Landmarks/Beaver Stadium" to="Game Grid/Landmarks/Beaver Stadium" method="_on_body_entered"]
@@ -435,5 +439,3 @@ shape = SubResource("RectangleShape2D_br6i5")
 [connection signal="body_entered" from="Game Grid/Landmarks/HUB" to="Game Grid/Landmarks/HUB" method="_on_body_entered"]
 [connection signal="body_entered" from="Game Grid/Landmarks/Creamery" to="Game Grid/Landmarks/Creamery" method="_on_body_entered"]
 [connection signal="body_entered" from="Game Grid/Landmarks/Pattee Library" to="Game Grid/Landmarks/Pattee Library" method="_on_body_entered"]
-
-[editable path="Word Game"]
