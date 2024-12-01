@@ -11,7 +11,7 @@ var landmarks_visited = []
 var score = 0
 
 func explore():
-	if len(landmarks_visited) == 2:
+	if len(landmarks_visited) == 7:
 			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/game.tscn")
