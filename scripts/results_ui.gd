@@ -18,8 +18,11 @@ func show_results(has_won: bool, word: String, number_of_moves: int):
 	word_label.add_theme_color_override("font_color", clear_color)
 	
 	var moves_string = "move" if number_of_moves == 1 else "moves"
-	
-	var score = 100 - (number_of_moves * 10) + 10
+
+	var score = 0
+
+	if has_won:
+		score = 100 - (number_of_moves * 10) + 10
 	
 	results_label.text = "You have won in " + str(number_of_moves) + " " + moves_string + ". Which means your score was: " + str(score) + "!" if has_won else "You have lost"
 	color = color_with_alpha
