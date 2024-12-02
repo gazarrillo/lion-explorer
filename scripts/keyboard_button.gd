@@ -1,7 +1,5 @@
 extends Button
 
-class_name KeyboardButton
-
 @export var letter: String
 
 @export var state: Enums.State = Enums.State.Empty

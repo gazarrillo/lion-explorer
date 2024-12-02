@@ -1,7 +1,5 @@
 extends Panel
 
-class_name LetterTile
-
 const state_to_theme_variation = ["empty", "incorrect", "correct_wrong_placement", "correct_right_placement"]
 
 var letter_value: String 

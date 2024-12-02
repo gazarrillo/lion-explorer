@@ -1,7 +1,5 @@
 extends VBoxContainer
 
-class_name RowsController
-
 @onready var word_pool = %WordPool
 @onready var keyboard = %Keyboard
 @onready var validation_alert = %ValidationAlert
