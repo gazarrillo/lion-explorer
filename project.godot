@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Enums="*res://Scripts/enums.gd"
 GameManager="*res://Scripts/game_manager.gd"
+Music="*res://Scenes/music.tscn"
 
 [editor]
 
