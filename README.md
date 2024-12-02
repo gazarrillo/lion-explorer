@@ -46,9 +46,12 @@ Each landmark you encounter unlocks a fun and challenging word game. Test your v
 3. **Run the Game**:
    - Press the **Play** button in Godot to start the game.
 
-## Contributing
+## Made By
 
-Contributions are welcome! Feel free to submit issues or pull requests to improve the game.
+- Giovanni Zarrillo
+- Rachel Lauzze
+- Abdur-Rahman Igram
+- Jacob Norgard
 
 ## Acknowledgements
 
