@@ -24,9 +24,23 @@ var letter_tiles
 var word_to_guess = ""
 
 func _ready():
-	word_to_guess = word_pool.get_random_word()
-	print(word_to_guess)
-
+	if GameManager.first_time:
+		if GameManager.landmarks_visited.back() == 'hub':
+			word_to_guess = "GROUP"
+		elif GameManager.landmarks_visited.back() == 'creamery':
+			word_to_guess = "DAIRY"
+		elif GameManager.landmarks_visited.back() == 'bjc':
+			word_to_guess = "MUSIC"
+		elif GameManager.landmarks_visited.back() == 'beaver_stadium':
+			word_to_guess = "CROWD"
+		elif GameManager.landmarks_visited.back() == 'lion_shrine':
+			word_to_guess = "PRIDE"
+		elif GameManager.landmarks_visited.back() == 'patee_library':
+			word_to_guess = "BOOKS"
+		else:
+			word_to_guess = "FIRST"
+	else:
+		word_to_guess = word_pool.get_random_word()
 
 func _on_keyboard_backspace_pressed():
 	if active_letter_index >= 0:

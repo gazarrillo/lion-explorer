@@ -5,6 +5,7 @@ var current_state
 var player_position: Vector2 = Vector2()
 var landmarks_visited: Array = []
 var score: int = 0
+var first_time = true
 
 func explore():
 	if len(landmarks_visited) == 7:
@@ -27,3 +28,4 @@ func restart_game():
 	score = 0
 	landmarks_visited = []
 	player_position = Vector2(0,0)
+	first_time = false
