@@ -1,18 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://bl0ihysmac0v1"]
 
 [ext_resource type="FontFile" uid="uid://bgrdk628hhc0s" path="res://Assets/font/PixelOperator8-Bold.ttf" id="1_8x201"]
+[ext_resource type="Texture2D" uid="uid://bfuutddi74l8t" path="res://Assets/world.png" id="1_yl0wv"]
 [ext_resource type="Script" path="res://Scripts/button.gd" id="2_yavp5"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_1qqpc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_26tcu"]
 font = ExtResource("1_8x201")
 font_size = 32
-font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8u5jd"]
 font = ExtResource("1_8x201")
-font_color = Color(0, 0, 0, 1)
+outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Main Menu" type="Control"]
@@ -30,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_1qqpc")
+texture = ExtResource("1_yl0wv")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
