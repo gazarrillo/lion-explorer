@@ -11,7 +11,7 @@ func _ready() -> void:
 	HUD.visible = false
 
 func explore():
-	if len(landmarks_visited) == 1:
+	if len(landmarks_visited) == 7:
 			HUD.visible = false
 			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 	else:
