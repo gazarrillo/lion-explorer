@@ -29,6 +29,7 @@ func show_results(has_won: bool, word: String, number_of_moves: int):
 	show()
 	
 	GameManager.score += score
+	GameManager.update_score_label()
 
 func _on_button_pressed():
 	GameManager.explore()

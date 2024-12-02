@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://h13xiimdr68r"]
+
+[ext_resource type="Texture2D" uid="uid://caynegb8iadk8" path="res://Assets/coin.png" id="1_5u60e"]
+[ext_resource type="FontFile" uid="uid://bgrdk628hhc0s" path="res://Assets/font/PixelOperator8-Bold.ttf" id="2_owsc8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1jx1"]
+font = ExtResource("2_owsc8")
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehb21"]
+font = ExtResource("2_owsc8")
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 73.0
+offset_right = 110.0
+offset_bottom = 138.0
+texture = ExtResource("1_5u60e")
+stretch_mode = 4
+
+[node name="Score Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 17.0
+offset_right = 118.0
+offset_bottom = 41.0
+text = "x 0"
+label_settings = SubResource("LabelSettings_u1jx1")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 42.0
+offset_right = 206.0
+offset_bottom = 66.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_ehb21")

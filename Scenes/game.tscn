@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bse4uu774scr3"]
+[gd_scene load_steps=7 format=3 uid="uid://bse4uu774scr3"]
 
 [ext_resource type="PackedScene" uid="uid://8rx13ttaug03" path="res://Scenes/word_game.tscn" id="1_u8o5s"]
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_uk2s4"]
 [ext_resource type="PackedScene" uid="uid://c0151yo4jercw" path="res://Scenes/game_grid.tscn" id="3_ym8t7"]
+[ext_resource type="PackedScene" uid="uid://h13xiimdr68r" path="res://Scenes/hud.tscn" id="6_6mmk1"]
 [ext_resource type="PackedScene" uid="uid://bl0ihysmac0v1" path="res://Scenes/main_menu.tscn" id="26_e2jvf"]
 [ext_resource type="PackedScene" uid="uid://dncraortxuga5" path="res://Scenes/music.tscn" id="27_rp6g8"]
 
@@ -22,3 +23,6 @@ unique_name_in_owner = true
 visible = false
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource("27_rp6g8")]
+
+[node name="HUD" parent="." instance=ExtResource("6_6mmk1")]
+visible = false

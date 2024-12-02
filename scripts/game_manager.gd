@@ -7,11 +7,17 @@ var landmarks_visited: Array = []
 var score: int = 0
 var first_time = true
 
+func _ready() -> void:
+	HUD.visible = false
+
 func explore():
-	if len(landmarks_visited) == 7:
+	if len(landmarks_visited) == 1:
+			HUD.visible = false
 			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/game_grid.tscn")
+		update_score_label()
+		HUD.visible = true
 		print('Score: ',score)
 		print("Ready to explore the game grid.")
 
@@ -29,3 +35,6 @@ func restart_game():
 	landmarks_visited = []
 	player_position = Vector2(0,0)
 	first_time = false
+	
+func update_score_label():
+	HUD.get_child(0).get_child(0).get_child(0).text = "x " + str(score)
