@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4frixfo5cdyn"]
+[gd_scene load_steps=4 format=3 uid="uid://b4frixfo5cdyn"]
 
 [ext_resource type="Script" path="res://Scripts/results_ui.gd" id="1_hxu2x"]
+[ext_resource type="Script" path="res://Scripts/facts.gd" id="2_ighlw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_363jy"]
 bg_color = Color(0.560955, 0.560955, 0.560955, 1)
@@ -49,6 +50,7 @@ offset_right = 182.0
 offset_bottom = 167.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ighlw")
 
 [node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer"]
 layout_mode = 2
@@ -84,5 +86,6 @@ first building of major significance. First
 completed in 1867, the current incarnation 
 of the building was completed in 1930."
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="CenterContainer/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

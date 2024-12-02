@@ -2,13 +2,9 @@ extends Node
 
 var current_state
 
-@onready var word_game: Node = %"Word Game"
-@onready var game_grid: Node2D = %"Game Grid"
-@onready var player: CharacterBody2D = %Player
-
 var player_position: Vector2 = Vector2()
-var landmarks_visited = []
-var score = 0
+var landmarks_visited: Array = []
+var score: int = 0
 
 func explore():
 	if len(landmarks_visited) == 7:
