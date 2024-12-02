@@ -19,11 +19,13 @@ func show_results(has_won: bool, word: String, number_of_moves: int):
 	
 	var moves_string = "move" if number_of_moves == 1 else "moves"
 	
-	results_label.text = "You have won in " + str(number_of_moves) + " " + moves_string if has_won else "You have lost"
+	var score = 100 - (number_of_moves * 10) + 10
+	
+	results_label.text = "You have won in " + str(number_of_moves) + " " + moves_string + ". Which means your score was: " + str(score) + "!" if has_won else "You have lost"
 	color = color_with_alpha
 	show()
-
+	
+	GameManager.score += score
 
 func _on_button_pressed():
-	GameManager.score += 1
 	GameManager.explore()
