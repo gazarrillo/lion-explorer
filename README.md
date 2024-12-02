@@ -28,8 +28,8 @@ Each landmark you encounter unlocks a fun and challenging word game. Test your v
 ## How to Play
 
 1. **Start the Game**: Launch the game to begin your campus adventure.
-2. **Explore the Campus**: Use the arrow keys or WASD to move your character around the game grid.
-3. **Visit Landmarks**: Approach a landmark to initiate a word game.
+2. **Explore the Campus**: Use the arrow keys to move your character around the game grid.
+3. **Visit Landmarks**: Approach a landmark to start a word game.
 4. **Play Word Games**: Solve the word puzzles presented to you. Each correct answer adds to your score.
 5. **Complete the Collection**: Aim to visit all the landmarks and master all the word games.
 
@@ -46,9 +46,12 @@ Each landmark you encounter unlocks a fun and challenging word game. Test your v
 3. **Run the Game**:
    - Press the **Play** button in Godot to start the game.
 
-## Contributing
+## Made By
 
-Contributions are welcome! Feel free to submit issues or pull requests to improve the game.
+- Giovanni Zarrillo
+- Rachel Lauzze
+- Abdur-Rahman Igram
+- Jacob Norgard
 
 ## Acknowledgements
 
