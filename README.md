@@ -37,7 +37,7 @@ Each landmark you encounter unlocks a fun and challenging word game. Test your v
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/campus-explorer.git
+   git clone https://github.com/gazarrillo/lion-explorer.git
    ```
 2. **Open in Godot Engine**:
    - Download and install the [Godot Engine](https://godotengine.org/).
