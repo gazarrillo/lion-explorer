@@ -28,8 +28,8 @@ Each landmark you encounter unlocks a fun and challenging word game. Test your v
 ## How to Play
 
 1. **Start the Game**: Launch the game to begin your campus adventure.
-2. **Explore the Campus**: Use the arrow keys or WASD to move your character around the game grid.
-3. **Visit Landmarks**: Approach a landmark to initiate a word game.
+2. **Explore the Campus**: Use the arrow keys to move your character around the game grid.
+3. **Visit Landmarks**: Approach a landmark to start a word game.
 4. **Play Word Games**: Solve the word puzzles presented to you. Each correct answer adds to your score.
 5. **Complete the Collection**: Aim to visit all the landmarks and master all the word games.
 
