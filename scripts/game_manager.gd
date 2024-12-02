@@ -11,7 +11,7 @@ func explore():
 	if len(landmarks_visited) == 7:
 			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 	else:
-		get_tree().change_scene_to_file("res://Scenes/game.tscn")
+		get_tree().change_scene_to_file("res://Scenes/game_grid.tscn")
 		print('Score: ',score)
 		print("Ready to explore the game grid.")
 
