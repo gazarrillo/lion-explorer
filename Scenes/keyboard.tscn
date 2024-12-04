@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://j3lgyhcucd8o" path="res://Scenes/keyboard_button.tscn" id="1_ybork"]
 [ext_resource type="PackedScene" uid="uid://3pwj13e5d3yg" path="res://Scenes/special_button.tscn" id="2_rv4hm"]
 [ext_resource type="StyleBox" uid="uid://cinj0nra55syj" path="res://Themes/button.stylebox" id="3_ugjbn"]
-[ext_resource type="Texture2D" uid="uid://d0us5qq07ebfy" path="res://Assets/backspace.png" id="4_sipw6"]
+[ext_resource type="Texture2D" uid="uid://d0us5qq07ebfy" path="res://assets/backspace.png" id="4_sipw6"]
 
 [node name="Keyboard" type="VBoxContainer"]
 offset_right = 40.0

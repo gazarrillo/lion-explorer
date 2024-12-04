@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0us5qq07ebfy"
-path="res://.godot/imported/backspace.png-b2e6a087a6bcafbc2cf12f12c703544e.ctex"
+path="res://.godot/imported/backspace.png-65fbf865fa17af1d58761f59e0dd10bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/backspace.png"
-dest_files=["res://.godot/imported/backspace.png-b2e6a087a6bcafbc2cf12f12c703544e.ctex"]
+source_file="res://assets/backspace.png"
+dest_files=["res://.godot/imported/backspace.png-65fbf865fa17af1d58761f59e0dd10bd.ctex"]
 
 [params]
 

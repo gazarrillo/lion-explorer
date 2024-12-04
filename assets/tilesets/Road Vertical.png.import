@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://76v0ey7a4lfb"
-path="res://.godot/imported/Road Vertical.png-eff44a525bc99e5c590ebd3c58d92b21.ctex"
+path="res://.godot/imported/Road Vertical.png-1573ae6bdbcd88594804e0cbbf07fa8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/Road Vertical.png"
-dest_files=["res://.godot/imported/Road Vertical.png-eff44a525bc99e5c590ebd3c58d92b21.ctex"]
+source_file="res://assets/tilesets/Road Vertical.png"
+dest_files=["res://.godot/imported/Road Vertical.png-1573ae6bdbcd88594804e0cbbf07fa8e.ctex"]
 
 [params]
 

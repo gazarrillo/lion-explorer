@@ -1,28 +1,31 @@
-[gd_scene load_steps=53 format=4 uid="uid://c0151yo4jercw"]
+[gd_scene load_steps=52 format=4 uid="uid://c0151yo4jercw"]
 
-[ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://Assets/tilesets/plains.png" id="1_41yf7"]
-[ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://Assets/tilesets/grass.png" id="2_ntyrv"]
-[ext_resource type="Texture2D" uid="uid://cfu8408b07cbk" path="res://Assets/tilesets/house 2.png" id="3_xja7c"]
-[ext_resource type="Texture2D" uid="uid://buf8n4mrocyee" path="res://Assets/tilesets/HUB.png" id="4_rvrvy"]
-[ext_resource type="Texture2D" uid="uid://c4grxkjodc76t" path="res://Assets/tilesets/nitanny lion.png" id="5_htn0t"]
-[ext_resource type="Texture2D" uid="uid://cbnkkl4v6wtfd" path="res://Assets/tilesets/old main.png" id="6_otmaq"]
-[ext_resource type="Texture2D" uid="uid://b4cga4wayi4br" path="res://Assets/tilesets/pattee.png" id="7_0nywl"]
-[ext_resource type="Texture2D" uid="uid://du0cas20sowva" path="res://Assets/tilesets/Tree 1.png" id="8_ci183"]
-[ext_resource type="Texture2D" uid="uid://bj0tpv4xp3v2o" path="res://Assets/tilesets/Tree 2.png" id="9_rgakr"]
-[ext_resource type="Texture2D" uid="uid://b50xd1ojabqaf" path="res://Assets/tilesets/Beaver Stadium.png" id="10_38b13"]
-[ext_resource type="Texture2D" uid="uid://f5vj5rly7x0i" path="res://Assets/tilesets/bryce jordan.png" id="11_5u2uv"]
-[ext_resource type="Texture2D" uid="uid://k3fb5rcfy7pc" path="res://Assets/tilesets/creamery.png" id="12_t20sl"]
-[ext_resource type="Texture2D" uid="uid://cciynqurjcx84" path="res://Assets/tilesets/Grass 1.png" id="13_rs86x"]
-[ext_resource type="Texture2D" uid="uid://bbnfoachaomtw" path="res://Assets/tilesets/Grass 2.png" id="14_g6dd3"]
-[ext_resource type="Texture2D" uid="uid://c470dxn517um1" path="res://Assets/tilesets/Grass 3.png" id="15_egktk"]
-[ext_resource type="Texture2D" uid="uid://bc0p8ckhyjsvx" path="res://Assets/tilesets/Grass 4.png" id="16_sbldr"]
-[ext_resource type="Texture2D" uid="uid://cxvucbix7ikv2" path="res://Assets/tilesets/Road Horizontal.png" id="17_yaysc"]
-[ext_resource type="Texture2D" uid="uid://cmgjydfe4sb5g" path="res://Assets/tilesets/Road Intersection.png" id="18_ofgql"]
-[ext_resource type="Texture2D" uid="uid://76v0ey7a4lfb" path="res://Assets/tilesets/Road Vertical.png" id="19_jyaxr"]
-[ext_resource type="Texture2D" uid="uid://d3hwmmsxidm4f" path="res://Assets/tilesets/house 1.png" id="20_p42vi"]
+[ext_resource type="Texture2D" uid="uid://cf180d8vjug0f" path="res://assets/tilesets/plains.png" id="1_41yf7"]
+[ext_resource type="Texture2D" uid="uid://dq6q7tsnurym" path="res://assets/tilesets/grass.png" id="2_ntyrv"]
+[ext_resource type="Texture2D" uid="uid://cfu8408b07cbk" path="res://assets/tilesets/house 2.png" id="3_xja7c"]
+[ext_resource type="Texture2D" uid="uid://buf8n4mrocyee" path="res://assets/tilesets/HUB.png" id="4_rvrvy"]
+[ext_resource type="Texture2D" uid="uid://c4grxkjodc76t" path="res://assets/tilesets/nitanny lion.png" id="5_htn0t"]
+[ext_resource type="Texture2D" uid="uid://cbnkkl4v6wtfd" path="res://assets/tilesets/old main.png" id="6_otmaq"]
+[ext_resource type="Texture2D" uid="uid://b4cga4wayi4br" path="res://assets/tilesets/pattee.png" id="7_0nywl"]
+[ext_resource type="Texture2D" uid="uid://du0cas20sowva" path="res://assets/tilesets/Tree 1.png" id="8_ci183"]
+[ext_resource type="Texture2D" uid="uid://bj0tpv4xp3v2o" path="res://assets/tilesets/Tree 2.png" id="9_rgakr"]
+[ext_resource type="Texture2D" uid="uid://b50xd1ojabqaf" path="res://assets/tilesets/Beaver Stadium.png" id="10_38b13"]
+[ext_resource type="Texture2D" uid="uid://f5vj5rly7x0i" path="res://assets/tilesets/bryce jordan.png" id="11_5u2uv"]
+[ext_resource type="Texture2D" uid="uid://k3fb5rcfy7pc" path="res://assets/tilesets/creamery.png" id="12_t20sl"]
+[ext_resource type="Texture2D" uid="uid://cciynqurjcx84" path="res://assets/tilesets/Grass 1.png" id="13_rs86x"]
+[ext_resource type="Texture2D" uid="uid://bbnfoachaomtw" path="res://assets/tilesets/Grass 2.png" id="14_g6dd3"]
+[ext_resource type="Texture2D" uid="uid://c470dxn517um1" path="res://assets/tilesets/Grass 3.png" id="15_egktk"]
+[ext_resource type="Texture2D" uid="uid://bc0p8ckhyjsvx" path="res://assets/tilesets/Grass 4.png" id="16_sbldr"]
+[ext_resource type="Texture2D" uid="uid://cxvucbix7ikv2" path="res://assets/tilesets/Road Horizontal.png" id="17_yaysc"]
+[ext_resource type="Texture2D" uid="uid://cmgjydfe4sb5g" path="res://assets/tilesets/Road Intersection.png" id="18_ofgql"]
+[ext_resource type="Texture2D" uid="uid://76v0ey7a4lfb" path="res://assets/tilesets/Road Vertical.png" id="19_jyaxr"]
+[ext_resource type="Texture2D" uid="uid://d3hwmmsxidm4f" path="res://assets/tilesets/house 1.png" id="20_p42vi"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="21_xsuk8"]
-[ext_resource type="Texture2D" uid="uid://cc5xk0jhlefsj" path="res://Assets/knight.png" id="22_8mtfp"]
+[ext_resource type="Texture2D" uid="uid://cv2tw4mekcwt4" path="res://assets/avatar1.png" id="22_54scj"]
 [ext_resource type="Script" path="res://Scripts/landmarks.gd" id="23_olwrh"]
+[ext_resource type="Texture2D" uid="uid://dym2gfm5sbopq" path="res://assets/avatar2.png" id="23_w8svj"]
+[ext_resource type="Texture2D" uid="uid://drkkj4lx6vvqy" path="res://assets/avatar3.png" id="24_yl6x4"]
+[ext_resource type="Texture2D" uid="uid://batj8lkac3emp" path="res://assets/avatar4.png" id="25_qq7n5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4um5n"]
 texture = ExtResource("1_41yf7")
@@ -252,36 +255,20 @@ sources/17 = SubResource("TileSetAtlasSource_m0tfp")
 sources/18 = SubResource("TileSetAtlasSource_uqup5")
 sources/19 = SubResource("TileSetAtlasSource_qt885")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0bgsa"]
-atlas = ExtResource("22_8mtfp")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b51nn"]
-atlas = ExtResource("22_8mtfp")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v8ovr"]
-atlas = ExtResource("22_8mtfp")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rcubq"]
-atlas = ExtResource("22_8mtfp")
-region = Rect2(96, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_emosh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0bgsa")
+"texture": ExtResource("22_54scj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b51nn")
+"texture": ExtResource("23_w8svj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v8ovr")
+"texture": ExtResource("24_yl6x4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rcubq")
+"texture": ExtResource("25_qq7n5")
 }],
 "loop": true,
 "name": &"idle",

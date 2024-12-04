@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqf603yaocd13"
-path="res://.godot/imported/water1.png-e37309333e1e115ff8e4581960c9d02f.ctex"
+uid="uid://cv2tw4mekcwt4"
+path="res://.godot/imported/avatar1.png-068e2c6067d01cc89a70aafc8c36b7e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/water1.png"
-dest_files=["res://.godot/imported/water1.png-e37309333e1e115ff8e4581960c9d02f.ctex"]
+source_file="res://assets/avatar1.png"
+dest_files=["res://.godot/imported/avatar1.png-068e2c6067d01cc89a70aafc8c36b7e8.ctex"]
 
 [params]
 

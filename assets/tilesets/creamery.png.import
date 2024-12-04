@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k3fb5rcfy7pc"
-path="res://.godot/imported/creamery.png-845031d1ee5bcc64c962a5ed9946b7f5.ctex"
+path="res://.godot/imported/creamery.png-421fe87e7fd36c67ee2d059bfe8495b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/creamery.png"
-dest_files=["res://.godot/imported/creamery.png-845031d1ee5bcc64c962a5ed9946b7f5.ctex"]
+source_file="res://assets/tilesets/creamery.png"
+dest_files=["res://.godot/imported/creamery.png-421fe87e7fd36c67ee2d059bfe8495b5.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buf8n4mrocyee"
-path="res://.godot/imported/HUB.png-216758f4384ff092a83b405a760f6de4.ctex"
+path="res://.godot/imported/HUB.png-c8bcc402030c43b18ea8f066cf525b0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/HUB.png"
-dest_files=["res://.godot/imported/HUB.png-216758f4384ff092a83b405a760f6de4.ctex"]
+source_file="res://assets/tilesets/HUB.png"
+dest_files=["res://.godot/imported/HUB.png-c8bcc402030c43b18ea8f066cf525b0c.ctex"]
 
 [params]
 

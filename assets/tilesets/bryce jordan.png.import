@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f5vj5rly7x0i"
-path="res://.godot/imported/bryce jordan.png-cf88f15cfc4de18d639766981888ca6f.ctex"
+path="res://.godot/imported/bryce jordan.png-ec76f40ac64305aa64008e00394707a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/bryce jordan.png"
-dest_files=["res://.godot/imported/bryce jordan.png-cf88f15cfc4de18d639766981888ca6f.ctex"]
+source_file="res://assets/tilesets/bryce jordan.png"
+dest_files=["res://.godot/imported/bryce jordan.png-ec76f40ac64305aa64008e00394707a4.ctex"]
 
 [params]
 

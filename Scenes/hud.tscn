@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://h13xiimdr68r"]
 
-[ext_resource type="Texture2D" uid="uid://caynegb8iadk8" path="res://Assets/coin.png" id="1_5u60e"]
-[ext_resource type="FontFile" uid="uid://bgrdk628hhc0s" path="res://Assets/font/PixelOperator8-Bold.ttf" id="2_owsc8"]
+[ext_resource type="Texture2D" uid="uid://caynegb8iadk8" path="res://assets/coin.png" id="1_5u60e"]
+[ext_resource type="FontFile" uid="uid://bgrdk628hhc0s" path="res://assets/font/PixelOperator8-Bold.ttf" id="2_owsc8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u1jx1"]
 font = ExtResource("2_owsc8")

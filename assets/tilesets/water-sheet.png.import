@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://foe6noiw03wd"
-path="res://.godot/imported/water-sheet.png-4be5915bab158ea0d072a2df14d10b7b.ctex"
+path="res://.godot/imported/water-sheet.png-f09277cbc3f1ba59b89e26813748aea7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/water-sheet.png"
-dest_files=["res://.godot/imported/water-sheet.png-4be5915bab158ea0d072a2df14d10b7b.ctex"]
+source_file="res://assets/tilesets/water-sheet.png"
+dest_files=["res://.godot/imported/water-sheet.png-f09277cbc3f1ba59b89e26813748aea7.ctex"]
 
 [params]
 
